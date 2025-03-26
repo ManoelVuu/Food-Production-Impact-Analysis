@@ -50,9 +50,9 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
 
 ## Business Questions
 1. Which food has the highest total CO2 footprint per kg?
-2. How do CO2 emissions vary across production stages for top-emitting foods?
-3. Which foods consume the most freshwater per kg?
+2. How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?
+3. Which foods consume the most freshwater withdrawals per kg?
 4. How do plant-based vs. animal-based foods compare in land use per kg?
-5. Which production stage contributes most to average CO2 emissions across all foods?
+5. Which production stage contributes most to average CO2 emissions across all 43 foods?
 6. Which foods have the highest eutrophying emissions per kg?
-7. Is there a correlation between freshwater withdrawals and CO2 emissions per kg?
+7. Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?
