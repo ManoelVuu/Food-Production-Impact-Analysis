@@ -47,9 +47,9 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
     - Flagged outliers (e.g., Scarcity-weighted water per kg max = 229889.8 L) for Day 2 review.
 
 ## Progress
-- **Day 1**: Repo initialized, dataset loaded into Power BI, nulls analyzed by food, "per kg" nulls replaced with 0, "per nutrient" nulls left for categorization, README updated with stats and rationale.
+- Repo initialized, dataset loaded into Power BI, nulls analyzed by food, "per kg" nulls replaced with 0, "per nutrient" nulls left for categorization, README updated with stats and rationale.
 
-## Day 2 Business Questions
+## Business Questions
 1. Which food has the highest total CO2 footprint per kg?
 2. How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?
 3. Which foods consume the most freshwater withdrawals per kg?
@@ -81,5 +81,5 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
   - "Per 1000kcal" and "per 100g protein" nulls unchanged—handled via Category filters in analysis.
  
 - ## Progress
-- **Day 1**: Repo created, raw dataset and Power BI file uploaded, "per kg" nulls replaced with 0, README updated.
-- **Day 2**: Defined 7 business questions, added Total CO2 and Category columns in Power BI, updated README with preprocessing details, rationale, and formulas, committed changes.
+- Repo created, raw dataset and Power BI file uploaded, "per kg" nulls replaced with 0, README updated.
+- Defined 7 business questions, added Total CO2 and Category columns in Power BI, updated README with preprocessing details, rationale, and formulas, committed changes.
