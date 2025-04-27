@@ -5,9 +5,14 @@
 ## Objective
 Quantify the environmental footprint of 43 food products across CO2 emissions, water use, land use, and eutrophication to derive sustainable recommendations for policymakers, producers, and consumers.
 
-## Tools
-- **Power BI**: Integrated tool for data prep, analysis, and interactive visualization, streamlining CRISP-DM.
-- **Git/GitHub**: Version control and storage for `.pbix`, visuals, and documentation.
+## Business Questions
+1. Which food has the highest total CO2 footprint per kg?
+2. How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?
+3. Which foods consume the most freshwater withdrawals per kg?
+4. How do plant-based vs. animal-based foods compare in land use per kg?
+5. Which production stage contributes most to average CO2 emissions across all 43 foods?
+6. Which foods have the highest eutrophying emissions per kg?
+7. Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?
 
 # Data Understanding
 - **Rows**: 43 foods
@@ -28,7 +33,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
   - Shrimps (farmed) nulls across all scales—flagged for validation.
 
 # Data preparation
-- **Initial Preprocessing**
+- **Preprocessing**
 - **Null Handling**:
 - **Per kg (12% empty)**:
   - Action: Replaced nulls with 0 for 5 foods.
@@ -45,16 +50,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
   - Checked for duplicates—none found (43 distinct foods).
   - Flagged outliers (e.g., Scarcity-weighted water per kg max = 229889.8 L).
 
-## Business Questions
-1. Which food has the highest total CO2 footprint per kg?
-2. How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?
-3. Which foods consume the most freshwater withdrawals per kg?
-4. How do plant-based vs. animal-based foods compare in land use per kg?
-5. Which production stage contributes most to average CO2 emissions across all 43 foods?
-6. Which foods have the highest eutrophying emissions per kg?
-7. Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?
-
-- **Preprocessing**:
+- **Feauture engineering**:
 - **Total CO2 Column**:
   - Action: Added as sum of 7 CO2 stages.
   - Why: Aggregates individual stages into a single metric to directly answer Q1 (highest CO2 food), Q2 (stage variation), Q5 (average stage contribution), and Q7 (correlation with water); simplifies analysis and visualization.
@@ -81,15 +77,15 @@ To answer the 7 business questions, we used Power BI’s Query Editor and DAX to
 
 - **Q1: Which food has the highest total CO2 footprint per kg?**  
   - Sorted `Total CO2` descending, filtered to “per kg” metrics.  
-  - Result: Beef (beef herd) = 59.60 kg CO₂/kg, ~300x nuts’ 0.20 kg.
+  - Result: Beef (beef herd) = 59.60 kg CO₂/kg, 300x nuts’ 0.20 kg.
 
 - **Q2: How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?**  
   - Filtered top 5 foods by `Total CO2` (Beef, Lamb, Cheese, etc.), extracted CO2 stages (Land use change, Farm, etc.).  
-  - Result: Farm stage contributes ~27% for Beef, highest among stages.
+  - Result: Farm stage contributes 27% for Beef, highest among stages.
 
 - **Q3: Which foods consume the most freshwater withdrawals per kg?**  
   - Sorted `Freshwater withdrawals per kg` descending.  
-  - Result: Cheese = 5,605 L/kg, ~16% of total water use.
+  - Result: Cheese = 5,605 L/kg, 16% of total water use.
 
 - **Q4: How do plant-based vs. animal-based foods compare in land use per kg?**  
   - Grouped by `Category` (Animal, Plant), summed `Land use per kg`.  
@@ -97,11 +93,11 @@ To answer the 7 business questions, we used Power BI’s Query Editor and DAX to
 
 - **Q5: Which production stage contributes most to average CO2 emissions across all 43 foods?**  
   - Calculated average CO2 per stage across 43 foods using DAX
-  - Result: Farm stage = 3.47 kg CO₂/kg, ~50x Retail’s 0.07 kg.
+  - Result: Farm stage = 3.47 kg CO₂/kg, 50x Retail’s 0.07 kg.
 
 - **Q6: Which foods have the highest eutrophying emissions per kg?**  
   - Sorted `Eutrophying emissions per kg` descending.  
-  - Result: Beef (dairy herd) = 365 g PO₄eq/kg, ~21% of total.
+  - Result: Beef (dairy herd) = 365 g PO₄eq/kg, 21% of total.
 
 - **Q7: Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?**  
   - Used scatter chart and gauge visual `Total CO2` and `Freshwater withdrawals per kg`
@@ -166,7 +162,7 @@ The analysis is visualized in `Environment Impact of Food Production Analysis.pb
 The analysis answered all 7 business questions, revealing critical environmental impacts and actionable solutions. Key findings and their implications:
 
 - **Q1**: Beef’s 59.60 kg CO₂/kg (300x nuts) makes it the top target for emission cuts—shifting to nuts could reduce CO₂ by orders of magnitude.
-- **Q2**: Farm stage’s ~27% CO₂ share for Beef highlights the need for methane capture and feed improvements.
+- **Q2**: Farm stage’s 27% CO₂ share for Beef highlights the need for carbon dioxide reduction strategies.
 - **Q3**: Cheese’s 5,605 L/kg water (16% of total) underscores irrigation upgrades as a priority.
 - **Q4**: Animal foods’ 93% land use vs. Plants’ 7% shows Plant-based diets as a high-impact solution.
 - **Q5**: Farm stage’s 3.47 kg CO₂/kg average (50x Retail) reinforces farming as the key intervention point.
@@ -176,45 +172,55 @@ The analysis answered all 7 business questions, revealing critical environmental
 ## Sustainability Summary & Recommendations
 The final page synthesizes findings into a concise, actionable narrative for policymakers, producers, and consumers.
 
-**The Challenge**  
-Food choices shape our planet. Beef and Cheese use massive land, water, and energy, fueling climate change. Nuts and Tofu use far less. We studied 43 foods to find what harms most and how to fix it.
+**The Challenge (Why it matters)**  
+Our food choices are reshaping the planet. Some foods, especially beef and cheese consume excessive land, water, and energy, accelerating climate change and environmental degradation. Others, like nuts and tofu, have a much smaller footprint. We analyzed 43 common foods to identify the biggest environmental contributors and spotlight smarter alternatives.
 
-**Key Insights**  
-- Beef emits 59.60 kg CO₂/kg—300x Nuts.
-- Animal foods take 93% of land; Plants 7%.
-- Cheese uses 5,605 L/kg water—tops all.
-- Farm stage drives ~30% of CO₂, led by Beef.
+**Key Insights (What we found)**  
+- Beef leads emissions: Beef (beef herd) emits 59.60 kg CO₂ per kg, 300x more than nuts (0.20 kg CO₂/kg).
+- Animal products dominate impact: Beef, lamb, and cheese account for 93% of land use, 80% of CO₂ emissions, and 80% of pollution across all foods.
+- Cheese drains water: Cheese uses 5,605 liters of water per kg, about 16% of total water use in our analysis.
+- Farm stage is the biggest CO₂ source: Farming contributes, 27–50% of food-related CO₂, especially for animal products.
+- Impacts are linked: Food’s high in CO₂ emissions tend to also use more water (correlation: 0.33), amplifying their environmental cost.
 
-**So What**  
-A few foods cause most harm. Targeting Beef, Cheese, and Farms can cut emissions, land, and water fast—big wins for planet and business.
+**So What (Why this matters to you)**  
+- A small group of animal-based foods is responsible for a majority of environmental damage.
+- Addressing just a few high-impact foods or stages can yield significant sustainability gains across land, water, emissions, and pollution.
+- Data-backed decisions around food sourcing, production methods, and consumer engagement can help companies hit ESG goals faster with real-world impact.
+  
+**What Now (Recommendations)**  
+1. Prioritize Low-Impact Foods
+- Promote plant-based options like nuts, legumes, and grains to reduce emissions and land use by up to 80% per kg.
+- Support internal and public education campaigns on high-impact foods.
+2. Transform Agricultural and Livestock Practices
+- Focus on carbon dioxide (CO2) reduction strategies (e.g., improve feeding through dietary changes) to lower Farm stage emissions.
+- Improve irrigation for high-water-use foods like cheese and rice.
+3. Support Food Innovation
+- Invest in sustainable meat alternatives (plant-based, cultured meat).
+- Adopt precision agriculture to optimize inputs and cut waste.
+4. Lead with Policy & Procurement
+- Implement CO₂ labeling or eco scorecards for food products.
+- Review procurement policies to favor low-impact suppliers and menu items.
 
-**What Now**  
-1. **Pick Plants**: Choose Nuts, Tofu—cuts 80% impact.  
-2. **Greener Farms**: Cut Beef’s CO₂, Cheese’s water.  
-3. **Label CO₂**: Tag foods’ impact—guide smart buys.
+**Conclusion**  
+A handful of foods cause the majority of environmental harm, and now we have the data to act. By targeting the most impactful items and improving key production stages, we can reduce emissions, conserve resources, and drive real progress toward a more sustainable food system.
 
-**Final Word**  
-Smarter foods save planet and billions. Start with Plants—act now!
-
-**So What? Why?**  
-- **Why 59.60?**: Beef’s CO₂ drives climate crisis—must target.
-- **Why 93%?**: Animal foods waste land—Plants fix it.
-- **Why Act?**: 80% cut saves planet, profits—urgent.
+Smarter food choices aren’t just better for the planet, they’re better for business.
 
 ## Deployment
 The project is deployed as a shareable, documented repository for stakeholders:
 
-- **Power BI File**: `FoodImpact.pbix` contains 8 interactive pages (Overview, Q1-Q7, Sustainability Summary).
+- **Power BI File**: `Environment Impact of Food Production Analysis.pbix` contains 8 interactive pages (Overview, Q1-Q7, Sustainability Summary).
 - **Visuals**: 9 PNGs in `/visuals` capture each page for static viewing:
   - `Overview_Metrics.png`
   - `Q1_CO2.png`, `Q2_Stages.png`, `Q3_Water.png`, `Q4_Land.png`, `Q5_Avg_CO2.png`, `Q6_Eutrophying.png`, `Q7_Correlation.png`
   - `Sustainability_Summary.png`
-- **README**: This file details objective, methodology, insights, visuals, and usage.
 
 **Usage Instructions**:
-1. **Interactive Exploration**: Open `FoodImpact.pbix` in Power BI Desktop to filter, drill down, and explore visuals.
+1. **Interactive Exploration**: Open `Environment Impact of Food Production Analysis.pbix` in Power BI Desktop to filter, drill down, and explore visuals.
 2. **Static Review**: View `/visuals` PNGs for quick insights or presentations.
 3. **Recommendations**: Use Sustainability Summary for policy, procurement, or consumer education strategies.
+
+- **README**: This file details business understanding, data understanding & preparation, analysis, insights, visuals, and usage.
 
 ## Future Steps
 - **Data Expansion**: Include more foods (e.g., processed items) or regional data for localized insights.
@@ -226,6 +232,8 @@ The project is deployed as a shareable, documented repository for stakeholders:
 For questions, reach out to [manoelvuu@gmail.com].
 
 ---
-**Built with**: Power BI  
-**Date**: April 26, 2025  
-**License**: MIT
+## Tools used:
+- **Power BI**: Integrated tool for data prep, analysis, and interactive visualization, streamlining CRISP-DM.
+- **Git/GitHub**: Version control and storage for `.pbix`, visuals, and documentation.
+  
+**Date**: April 11, 2025
