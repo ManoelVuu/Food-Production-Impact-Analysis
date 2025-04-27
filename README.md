@@ -45,7 +45,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
 - **Per 100g protein (37-40% empty)**:
   - Action: Left nulls in 16-17 foods.
   - Why: Zero/low-protein foods (e.g., Olive Oil, Cane Sugar)—0 misrepresents (implies no impact); excluded from protein analysis.
-- **Cleaning**:
+- **Data cleaning**:
   - Ensured numeric columns (e.g., "GHG emissions per kg") set to Decimal Number.
   - Checked for duplicates—none found (43 distinct foods).
   - Flagged outliers (e.g., Scarcity-weighted water per kg max = 229889.8 L).
@@ -158,17 +158,6 @@ The analysis is visualized in `Environment Impact of Food Production Analysis.pb
    - **Visual**: Text (Challenge, Insights, So What, What Now, Conclusion).  
    - **Content**: See below for full text.
 
-# Evaluation
-The analysis answered all 7 business questions, revealing critical environmental impacts and actionable solutions. Key findings and their implications:
-
-- **Q1**: Beef’s 59.60 kg CO₂/kg (300x nuts) makes it the top target for emission cuts—shifting to nuts could reduce CO₂ by orders of magnitude.
-- **Q2**: Farm stage’s 27% CO₂ share for Beef highlights the need for carbon dioxide reduction strategies.
-- **Q3**: Cheese’s 5,605 L/kg water (16% of total) underscores irrigation upgrades as a priority.
-- **Q4**: Animal foods’ 93% land use vs. Plants’ 7% shows Plant-based diets as a high-impact solution.
-- **Q5**: Farm stage’s 3.47 kg CO₂/kg average (50x Retail) reinforces farming as the key intervention point.
-- **Q6**: Beef (dairy herd)’s 365 g PO₄eq/kg (21% of pollution) links high-CO₂ foods to water pollution.
-- **Q7**: CO₂-water correlation (0.33) confirms that high-impact foods (e.g., Beef, Cheese) harm across multiple metrics.
-
 ## Sustainability Summary & Recommendations
 The final page synthesizes findings into a concise, actionable narrative for policymakers, producers, and consumers.
 
@@ -205,6 +194,18 @@ Our food choices are reshaping the planet. Some foods, especially beef and chees
 A handful of foods cause the majority of environmental harm, and now we have the data to act. By targeting the most impactful items and improving key production stages, we can reduce emissions, conserve resources, and drive real progress toward a more sustainable food system.
 
 Smarter food choices aren’t just better for the planet, they’re better for business.
+
+# Evaluation
+The analysis answered all 7 business questions, revealing critical environmental impacts and actionable solutions. Key findings and their implications:
+
+- **Q1**: Beef’s 59.60 kg CO₂/kg (300x nuts) makes it the top target for emission cuts—shifting to nuts could reduce CO₂ by orders of magnitude.
+- **Q2**: Farm stage’s 27% CO₂ share for Beef highlights the need for carbon dioxide reduction strategies.
+- **Q3**: Cheese’s 5,605 L/kg water (16% of total) underscores irrigation upgrades as a priority.
+- **Q4**: Animal foods’ 93% land use vs. Plants’ 7% shows Plant-based diets as a high-impact solution.
+- **Q5**: Farm stage’s 3.47 kg CO₂/kg average (50x Retail) reinforces farming as the key intervention point.
+- **Q6**: Beef (dairy herd)’s 365 g PO₄eq/kg (21% of pollution) links high-CO₂ foods to water pollution.
+- **Q7**: CO₂-water correlation (0.33) confirms that high-impact foods (e.g., Beef, Cheese) harm across multiple metrics.
+
 
 ## Deployment
 The project is deployed as a shareable, documented repository for stakeholders:
