@@ -1,6 +1,6 @@
 # Food-Production-Impact-Analysis
 
-# Environmental Impact of Food Production Analysis
+# Business Understanding
 
 ## Objective
 Quantify the environmental footprint of 43 food products across CO2 emissions, water use, land use, and eutrophication to derive sustainable recommendations for policymakers, producers, and consumers.
@@ -9,7 +9,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
 - **Power BI**: Integrated tool for data prep, analysis, and interactive visualization, streamlining CRISP-DM.
 - **Git/GitHub**: Version control and storage for `.pbix`, visuals, and documentation.
 
-## Dataset
+# Data Understanding
 - **Rows**: 43 foods
 - **Columns**: 23 (7 CO2 stages, eutrophying emissions, freshwater withdrawals, land use, scarcity-weighted water; per kg, 1000kcal, 100g protein)
 - **Data Validity and Nulls**:
@@ -27,7 +27,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
   - Core "per kg" data more complete; high-impact foods (e.g., beef, dairy) unaffected.
   - Shrimps (farmed) nulls across all scales—flagged for validation.
 
-## Methodology
+# Data preparation
 - **Initial Preprocessing**
 - **Null Handling**:
 - **Per kg (12% empty)**:
@@ -76,7 +76,7 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
       ```
 - "Per 1000kcal" and "per 100g protein" nulls unchanged—handled via Category filters in analysis.
 
-## Analysis
+# Analysis
 To answer the 7 business questions, we used Power BI’s Query Editor and DAX to process the dataset, leveraging the preprocessed `Total CO2` (sum of 7 CO2 stages) and `Category` (Animal, Plant, Non-Protein) columns. Key steps:
 
 - **Q1: Which food has the highest total CO2 footprint per kg?**  
@@ -111,7 +111,7 @@ To answer the 7 business questions, we used Power BI’s Query Editor and DAX to
 - Nulls in “per 1000kcal” and “per 100g protein” metrics were filtered out using `Category` (excluded Non-Protein foods for protein analysis).
 - Shrimps (farmed) nulls (set to 0 for “per kg”) had minimal impact, as focus was on high-impact foods (Beef, Cheese).
 
-## Visualization
+# Visualization
 The analysis is visualized in `Environment Impact of Food Production Analysis.pbix` across 8 pages, each addressing a specific question or summary. Visuals are designed for clarity, using bar, pie, and scatter charts, with KPI cards for quick insights.
 
 1. **Overview & Key Metrics** ![Overview   Key Metrics](https://github.com/user-attachments/assets/3e2da351-b32a-4cce-a997-1c6e2f97b8f7)
@@ -162,7 +162,7 @@ The analysis is visualized in `Environment Impact of Food Production Analysis.pb
    - **Visual**: Text (Challenge, Insights, So What, What Now, Conclusion).  
    - **Content**: See below for full text.
 
-## Evaluation
+# Evaluation
 The analysis answered all 7 business questions, revealing critical environmental impacts and actionable solutions. Key findings and their implications:
 
 - **Q1**: Beef’s 59.60 kg CO₂/kg (300x nuts) makes it the top target for emission cuts—shifting to nuts could reduce CO₂ by orders of magnitude.
@@ -173,7 +173,7 @@ The analysis answered all 7 business questions, revealing critical environmental
 - **Q6**: Beef (dairy herd)’s 365 g PO₄eq/kg (21% of pollution) links high-CO₂ foods to water pollution.
 - **Q7**: CO₂-water correlation (0.33) confirms that high-impact foods (e.g., Beef, Cheese) harm across multiple metrics.
 
-### Sustainability Summary & Recommendations
+## Sustainability Summary & Recommendations
 The final page synthesizes findings into a concise, actionable narrative for policymakers, producers, and consumers.
 
 **The Challenge**  
