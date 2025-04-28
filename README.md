@@ -107,8 +107,8 @@ To answer the 7 business questions, I used Power BI’s Query Editor and DAX, le
 - Filtered out nulls in "per 1000kcal" and "per 100g protein" analyses by using the Category field (excluded Non-Protein foods for protein-related metrics).
 - Shrimps (farmed) nulls (set to 0 for "per kg") had minimal impact, as analysis focused on major contributors (e.g., Beef, Cheese).
 
-# Visualization
-The analysis is visualized in `Environment Impact of Food Production Analysis.pbix` across 8 pages, each addressing a specific question or summary. Visuals are designed for clarity, using bar, pie, and scatter charts, with KPI cards for quick insights.
+# Visualization & Key Insights
+The analysis is visualized in `Environment Impact of Food Production Analysis.pbix` across 8 pages, each addressing a specific question or summary. Visuals are designed for clarity, including bar, pie, and scatter charts, with KPI cards for quick insights.
 
 1. **Overview & Key Metrics** ![Overview   Key Metrics](https://github.com/user-attachments/assets/3e2da351-b32a-4cce-a997-1c6e2f97b8f7)
  
@@ -156,7 +156,7 @@ The analysis is visualized in `Environment Impact of Food Production Analysis.pb
 9. **Sustainability Summary & Recommendations** ![Sustainability Summary and Recommendation](https://github.com/user-attachments/assets/0b02a98b-7c4d-4f67-b149-ee15a0f56da1)
  
    - **Visual**: Text (Challenge, Insights, So What, What Now, Conclusion).  
-   - **Content**: See below for full text.
+   - **Content**: Full text provided below.
 
 ## Sustainability Summary & Recommendations
 The final page synthesizes findings into a concise, actionable narrative for policymakers, producers, and consumers.
@@ -177,16 +177,16 @@ Our food choices are reshaping the planet. Some foods, especially beef and chees
 - Data-backed decisions around food sourcing, production methods, and consumer engagement can help companies hit ESG goals faster with real-world impact.
   
 **What Now (Recommendations)**  
-1. Prioritize Low-Impact Foods
+**1. Prioritize Low-Impact Foods**
 - Promote plant-based options like nuts, legumes, and grains to reduce emissions and land use by up to 80% per kg.
 - Support internal and public education campaigns on high-impact foods.
-2. Transform Agricultural and Livestock Practices
+**2. Transform Agricultural and Livestock Practices**
 - Focus on carbon dioxide (CO2) reduction strategies (e.g., improve feeding through dietary changes) to lower Farm stage emissions.
 - Improve irrigation for high-water-use foods like cheese and rice.
-3. Support Food Innovation
+**3. Support Food Innovation**
 - Invest in sustainable meat alternatives (plant-based, cultured meat).
 - Adopt precision agriculture to optimize inputs and cut waste.
-4. Lead with Policy & Procurement
+**4. Lead with Policy & Procurement**
 - Implement CO₂ labeling or eco scorecards for food products.
 - Review procurement policies to favor low-impact suppliers and menu items.
 
