@@ -73,39 +73,32 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
 - "Per 1000kcal" and "per 100g protein" nulls unchanged—handled via Category filters in analysis.
 
 # Analysis
-To answer the 7 business questions, we used Power BI’s Query Editor and DAX to process the dataset, leveraging the preprocessed `Total CO2` (sum of 7 CO2 stages) and `Category` (Animal, Plant, Non-Protein) columns. Key steps:
-
-- **Q1: Which food has the highest total CO2 footprint per kg?**  
-  - Sorted `Total CO2` descending, filtered to “per kg” metrics.  
-  - Result: Beef (beef herd) = 59.60 kg CO₂/kg, 300x nuts’ 0.20 kg.
-
-- **Q2: How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?**  
-  - Filtered top 5 foods by `Total CO2` (Beef, Lamb, Cheese, etc.), extracted CO2 stages (Land use change, Farm, etc.).  
-  - Result: Farm stage contributes 27% for Beef, highest among stages.
-
-- **Q3: Which foods consume the most freshwater withdrawals per kg?**  
-  - Sorted `Freshwater withdrawals per kg` descending.  
-  - Result: Cheese = 5,605 L/kg, 16% of total water use.
-
-- **Q4: How do plant-based vs. animal-based foods compare in land use per kg?**  
-  - Grouped by `Category` (Animal, Plant), summed `Land use per kg`.  
-  - Result: Animal foods = 93% of total land; Plants = 7%.
-
-- **Q5: Which production stage contributes most to average CO2 emissions across all 43 foods?**  
-  - Calculated average CO2 per stage across 43 foods using DAX
-  - Result: Farm stage = 3.47 kg CO₂/kg, 50x Retail’s 0.07 kg.
-
-- **Q6: Which foods have the highest eutrophying emissions per kg?**  
-  - Sorted `Eutrophying emissions per kg` descending.  
-  - Result: Beef (dairy herd) = 365 g PO₄eq/kg, 21% of total.
-
-- **Q7: Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?**  
-  - Used scatter chart and gauge visual `Total CO2` and `Freshwater withdrawals per kg`
-  - Result: Moderate correlation = 0.33.
+To answer the 7 business questions, I used Power BI’s Query Editor and DAX, leveraging the preprocessed Total CO₂ and Category (Animal, Plant, Non-Protein) columns.
+- **Q1: Which food has the highest total CO₂ footprint per kg?**
+- **Method**: Sorted Total CO₂ descending, filtered to "per kg" metrics.
+- **Result**: Beef (beef herd) = 59.60 kg CO₂/kg, nearly 300× that of Nuts (0.20 kg CO₂/kg).
+- **Q2: How do CO₂ emissions vary across production stages for the top 5 CO₂-emitting foods?**
+- **Method**: Filtered top 5 foods (Beef, Lamb, Cheese, etc.), analyzed CO₂ stages (Land use change, Farm, etc.).
+- **Result**: Farm stage contributes 27% of Beef’s total emissions — the highest among all stages.
+- **Q3: Which foods consume the most freshwater withdrawals per kg?**
+- **Method**: Sorted Freshwater Withdrawals per kg descending.
+- **Result**: Cheese = 5,605 L/kg, accounting for 16% of total freshwater usage.
+- **Q4: How do plant-based vs. animal-based foods compare in land use per kg?**
+- **Method**: Grouped by Category, summed Land Use per kg.
+- **Result**: Animal foods = 93% of total land use; Plants = 7%.
+- **Q5: Which production stage contributes most to average CO₂ emissions across all foods?**
+- **Method**: Used DAX to calculate average Total CO₂ per stage across 43 foods.
+- **Result**: Farm stage = 3.47 kg CO₂/kg, approximately 50× higher than Retail’s 0.07 kg.
+- **Q6: Which foods have the highest eutrophying emissions per kg?**
+- **Method**: Sorted Eutrophying emissions per kg descending.
+- **Result**: Beef (dairy herd) = 365 g PO₄eq/kg, representing 21% of total eutrophication impact.
+- **Q7: Is there a correlation between freshwater withdrawals and total CO₂ emissions per kg?**
+- **Method**: Created scatter chart and gauge visuals between Total CO₂ and Freshwater Withdrawals per kg.
+- **Result**: Moderate positive correlation = 0.33.
 
 **Notes**:
-- Nulls in “per 1000kcal” and “per 100g protein” metrics were filtered out using `Category` (excluded Non-Protein foods for protein analysis).
-- Shrimps (farmed) nulls (set to 0 for “per kg”) had minimal impact, as focus was on high-impact foods (Beef, Cheese).
+- Filtered out nulls in "per 1000kcal" and "per 100g protein" analyses by using the Category field (excluded Non-Protein foods for protein-related metrics).
+- Shrimps (farmed) nulls (set to 0 for "per kg") had minimal impact, as analysis focused on major contributors (e.g., Beef, Cheese).
 
 # Visualization
 The analysis is visualized in `Environment Impact of Food Production Analysis.pbix` across 8 pages, each addressing a specific question or summary. Visuals are designed for clarity, using bar, pie, and scatter charts, with KPI cards for quick insights.
