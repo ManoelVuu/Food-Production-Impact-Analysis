@@ -180,12 +180,15 @@ Our food choices are reshaping the planet. Some foods, especially beef and chees
 **1. Prioritize Low-Impact Foods**
 - Promote plant-based options like nuts, legumes, and grains to reduce emissions and land use by up to 80% per kg.
 - Support internal and public education campaigns on high-impact foods.
+
 **2. Transform Agricultural and Livestock Practices**
 - Focus on carbon dioxide (CO2) reduction strategies (e.g., improve feeding through dietary changes) to lower Farm stage emissions.
 - Improve irrigation for high-water-use foods like cheese and rice.
+
 **3. Support Food Innovation**
 - Invest in sustainable meat alternatives (plant-based, cultured meat).
 - Adopt precision agriculture to optimize inputs and cut waste.
+
 **4. Lead with Policy & Procurement**
 - Implement CO₂ labeling or eco scorecards for food products.
 - Review procurement policies to favor low-impact suppliers and menu items.
