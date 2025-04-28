@@ -36,35 +36,35 @@ Quantify the environmental footprint of 43 food products across CO2 emissions, w
 - **Preprocessing**
 - **Null Handling**:
 - **Per kg (12% empty)**:
-  - Action: Replaced nulls with 0 for 5 foods.
-  - Why: Small scope (12%)—low skew risk; grains (Bread, Meal, Beer) and Tofu likely have negligible unrecorded impact; Shrimps (farmed) conservatively set to 0, flagged for review.
-  - Formula: Power Query UI step—Replace Values: null → 0 (applied to each column).
+  - **Action**: Replaced nulls with 0 for 5 foods.
+  - **Why**: Small scope (12%)—low skew risk; grains (Bread, Meal, Beer) and Tofu likely have negligible unrecorded impact; Shrimps (farmed) conservatively set to 0, flagged for review.
+  - **Formula**: Power Query UI step—Replace Values: null → 0 (applied to each column).
 - **Per 1000kcal (23-30% empty)**:
-  - Action: Left nulls in 10-13 foods.
-  - Why: Low-calorie foods (e.g., Other Vegetables, Wine)—0 underestimates impact (e.g., wine needs water despite low kcal); awaits categorization for filtering or imputation.
+  - **Action**: Left nulls in 10-13 foods.
+  - **Why**: Low-calorie foods (e.g., Other Vegetables, Wine)—0 underestimates impact (e.g., wine needs water despite low kcal); awaits categorization for filtering or imputation.
 - **Per 100g protein (37-40% empty)**:
-  - Action: Left nulls in 16-17 foods.
-  - Why: Zero/low-protein foods (e.g., Olive Oil, Cane Sugar)—0 misrepresents (implies no impact); excluded from protein analysis.
-- **Data cleaning**:
+  - **Action**: Left nulls in 16-17 foods.
+  - **Why**: Zero/low-protein foods (e.g., Olive Oil, Cane Sugar)—0 misrepresents (implies no impact); excluded from protein analysis.
+- **Data Cleaning**:
   - Ensured numeric columns (e.g., "GHG emissions per kg") set to Decimal Number.
   - Checked for duplicates—none found (43 distinct foods).
   - Flagged outliers (e.g., Scarcity-weighted water per kg max = 229889.8 L).
 
-- **Feauture engineering**:
-- **Total CO2 Column**:
-  - Action: Added as sum of 7 CO2 stages.
-  - Why: Aggregates individual stages into a single metric to directly answer Q1 (highest CO2 food), Q2 (stage variation), Q5 (average stage contribution), and Q7 (correlation with water); simplifies analysis and visualization.
-  - Formula: 
+- **Feauture Engineering**:
+- **Feauture: Total CO2 Column**
+  - **Action**: Added as sum of 7 CO2 stages.
+  - **Why**: Aggregates individual stages into a single metric to directly answer Q1 (highest CO2 food), Q2 (stage variation), Q5 (average stage contribution), and Q7 (correlation with water); simplifies analysis and visualization.
+  - **Formula**: 
       ```
       Total CO2 = [Land use change] + [Animal Feed] + [Farm] + [Processing] + [Transport] + [Packaging] + [Retail]
       ```
-- **Category Column**:
-  - Action: Categorized 43 foods into 3 groups:
+- **Feauture: Category Column**
+  - **Action**: Categorized 43 foods into 3 groups:
   - Animal (10): Beef (beef herd), Beef (dairy herd), Lamb & Mutton, Pig Meat, Poultry Meat, Milk, Cheese, Eggs, Fish (farmed), Shrimps (farmed).
   - Plant (26): Wheat & Rye (Bread), Maize (Meal), Barley (Beer), Oatmeal, Rice, etc.
   - Non-Protein (7): Cane Sugar, Beet Sugar, Soybean Oil, Palm Oil, Sunflower Oil, Rapeseed Oil, Olive Oil.
-  - Why: Enables Q4 (plant vs. animal land use comparison); addresses "per 100g protein" nulls by excluding Non-Protein foods (e.g., oils, sugars) from protein-based metrics; supports filtering for "per 1000kcal" nulls (e.g., low-calorie Plants).
-  - Formula: 
+  - **Why**: Enables Q4 (plant vs. animal land use comparison); addresses "per 100g protein" nulls by excluding Non-Protein foods (e.g., oils, sugars) from protein-based metrics; supports filtering for "per 1000kcal" nulls (e.g., low-calorie Plants).
+  - **Formula**: 
       ```
       if Text.Contains([Food], "Beef") or Text.Contains([Food], "Lamb") or Text.Contains([Food], "Pig") or Text.Contains([Food], "Poultry") or Text.Contains([Food], "Milk") or Text.Contains([Food], "Cheese") or Text.Contains([Food], "Eggs") or Text.Contains([Food], "Fish") or Text.Contains([Food], "Shrimps") then "Animal"
       else if Text.Contains([Food], "Oil") or Text.Contains([Food], "Sugar") then "Non-Protein"
