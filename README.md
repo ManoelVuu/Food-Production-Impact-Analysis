@@ -199,45 +199,47 @@ A handful of foods cause the majority of environmental harm, and now we have the
 Smarter food choices aren’t just better for the planet, they’re better for business.
 
 # Evaluation
-The analysis answered all 7 business questions, revealing critical environmental impacts and actionable solutions. Key findings and their implications:
+The analysis answered seven core business questions and synthesized findings in a final **Sustainability Summary** page. Key insights and their implications include:
 
-- **Q1**: Beef’s 59.60 kg CO₂/kg (300x nuts) makes it the top target for emission cuts—shifting to nuts could reduce CO₂ by orders of magnitude.
-- **Q2**: Farm stage’s 27% CO₂ share for Beef highlights the need for carbon dioxide reduction strategies.
-- **Q3**: Cheese’s 5,605 L/kg water (16% of total) underscores irrigation upgrades as a priority.
-- **Q4**: Animal foods’ 93% land use vs. Plants’ 7% shows Plant-based diets as a high-impact solution.
-- **Q5**: Farm stage’s 3.47 kg CO₂/kg average (50x Retail) reinforces farming as the key intervention point.
-- **Q6**: Beef (dairy herd)’s 365 g PO₄eq/kg (21% of pollution) links high-CO₂ foods to water pollution.
-- **Q7**: CO₂-water correlation (0.33) confirms that high-impact foods (e.g., Beef, Cheese) harm across multiple metrics.
+- **Q1:** Beef produces **59.60 kg CO₂/kg**, nearly **300 times** more than nuts, making it the top target for emission cuts. Shifting to plant-based options like nuts can drastically reduce CO₂ emissions.
+- **Q2:** The **farm stage accounts for 27%** of beef’s CO₂ emissions, highlighting the importance of targeted carbon reduction strategies at this stage.
+- **Q3:** Cheese uses **5,605 L/kg of water**, contributing **16%** of total water use. This indicates that upgrading irrigation systems should be a priority.
+- **Q4:** Animal-based foods consume **93%** of total land use, compared to **7%** for plant-based foods. Promoting plant-based diets offers a high-impact solution.
+- **Q5:** The farm stage emits an average of **3.47 kg CO₂/kg**, nearly **50 times** more than the retail stage. This reinforces farming as the most effective intervention point.
+- **Q6:** Beef from dairy herds produces **365 g PO₄eq/kg**, accounting for **21%** of eutrophying pollution, linking high-CO₂ foods with water pollution concerns.
+- **Q7:** A **CO₂-water use correlation of 0.33** shows that high-impact foods (e.g., beef, cheese) negatively affect multiple environmental metrics simultaneously.
 
+# Deployment
+The project is deployed as a shareable, well-documented repository designed for stakeholder use.
 
-## Deployment
-The project is deployed as a shareable, documented repository for stakeholders:
+## Components:
 
-- **Power BI File**: `Environment Impact of Food Production Analysis.pbix` contains 8 interactive pages (Overview, Q1-Q7, Sustainability Summary).
-- **Visuals**: 9 PNGs in `/visuals` capture each page for static viewing:
+- **Power BI File:** `Environment Impact of Food Production Analysis.pbix` contains eight interactive pages (Overview, Q1–Q7, Sustainability Summary).
+- **Visuals:** Nine static PNGs in the `/visuals` folder for quick reference and presentation use:
   - `Overview_Metrics.png`
   - `Q1_CO2.png`, `Q2_Stages.png`, `Q3_Water.png`, `Q4_Land.png`, `Q5_Avg_CO2.png`, `Q6_Eutrophying.png`, `Q7_Correlation.png`
   - `Sustainability_Summary.png`
 
-**Usage Instructions**:
-1. **Interactive Exploration**: Open `Environment Impact of Food Production Analysis.pbix` in Power BI Desktop to filter, drill down, and explore visuals.
-2. **Static Review**: View `/visuals` PNGs for quick insights or presentations.
-3. **Recommendations**: Use Sustainability Summary for policy, procurement, or consumer education strategies.
+## Usage Instructions:
 
-- **README**: This file details business understanding, data understanding & preparation, analysis, insights, visuals, and usage.
+- **Interactive Exploration:** Open the `.pbix` file in Power BI Desktop to filter, drill down, and explore data insights.
+- **Static Review:** Use the PNGs in the `/visuals` folder for quick insights or inclusion in presentations.
+- **Recommendations:** Refer to the **Sustainability Summary** page for policy formulation, procurement guidance, or consumer education initiatives.
 
 ## Future Steps
-- **Data Expansion**: Include more foods (e.g., processed items) or regional data for localized insights.
-- **Cost-Benefit Analysis**: Quantify ROI of recommendations (e.g., CO₂ labeling costs vs. ESG gains).
-- **Real-Time Monitoring**: Build dashboards for supply chain tracking using live data.
-- **Validation**: Revisit Shrimps (farmed) nulls and scarcity-weighted water outliers (e.g., 229889.8 L) with updated data.
+
+- **Data Expansion:** Integrate more food categories (e.g., processed foods) or regional breakdowns to enhance localized insight.
+- **Cost-Benefit Analysis:** Estimate the return on investment (ROI) for proposed interventions (e.g., CO₂ labeling costs vs. ESG benefits).
+- **Real-Time Monitoring:** Develop dynamic dashboards to track supply chain sustainability using live data.
+- **Validation:** Investigate missing values for farmed shrimp and address outliers in scarcity-weighted water usage (e.g., **229,889.8 L/kg**) with updated or verified data.
 
 ## Contact
-For questions, reach out to [manoelvuu@gmail.com].
 
----
-## Tools used:
-- **Power BI**: Integrated tool for data prep, analysis, and interactive visualization, streamlining CRISP-DM.
-- **Git/GitHub**: Version control and storage for `.pbix`, visuals, and documentation.
-  
-**Date**: April 11, 2025
+For inquiries or collaboration, please reach out to: [manoelvuu@gmail.com](mailto:manoelvuu@gmail.com)
+
+## Tools Used
+
+- **Power BI:** Unified tool for data preparation, analysis, and interactive visualization, streamlining the CRISP-DM methodology.
+- **Git/GitHub:** Version control and repository hosting for `.pbix` files, visuals, and supporting documentation.
+
+**Date:** April 11, 2025
