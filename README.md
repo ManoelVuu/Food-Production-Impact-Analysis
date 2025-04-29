@@ -1,5 +1,15 @@
 # Food-Production-Impact-Analysis
 
+## Table of Contents
+
+- [Business Understanding](#business-understanding)
+- [Data Understanding](#data-understanding)
+- [Data Preparation](#data-preparation)
+- [Analysis](#analysis)
+- [Visualisation & Key Insights](#visualisation-&-key-insights)
+- [Evaluation](#evaluation)
+- [Deployment](#deployment)
+
 # Business Understanding
 
 ## Objective
