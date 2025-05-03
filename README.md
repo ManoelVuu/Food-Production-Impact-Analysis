@@ -246,6 +246,7 @@ The project is deployed as a shareable, well-documented repository designed for 
 ## Contact
 
 For inquiries or collaboration, please reach out to: [manoelvuu@gmail.com](mailto:manoelvuu@gmail.com)
+- **Medium**: Read the full story at [How Your Plate Shape the Planet](https://medium.com/@manoelvuu/how-your-plate-shapes-the-planet-a-data-dive-into-foods-hidden-costs-e2749444a4fc)
 
 ## Tools Used
 
