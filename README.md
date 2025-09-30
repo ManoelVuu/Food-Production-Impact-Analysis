@@ -221,4 +221,5 @@ For inquiries or collaboration, please reach out to: [manoelvuu@gmail.com](mailt
 - **Git/GitHub:** Version control and repository hosting for `.pbix` files, visuals, and supporting documentation.
 
 **Date:** April 11, 2025
+
 **Updated:** September 30, 2025
