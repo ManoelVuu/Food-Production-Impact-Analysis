@@ -120,7 +120,7 @@ The analysis is visualized in `Environmental Impact of Food Production Analysis.
 2. **Q1: Which food has the highest total CO2 footprint per kg?** <img width="600" height="645" alt="CO2 emission" src="https://github.com/user-attachments/assets/52c9346b-bf47-4755-95b1-e8c0d03cdccc" />
 
    - **Insight**: Animal-based foods produce over 2.5× more CO₂ per kg than plant-based, making them the biggest driver of emissions; reducing animal intake offers the largest sustainability gains.
-   - 
+     
 3. **Q2: How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?** <img width="698" height="641" alt="Top 5 foods production stage emission" src="https://github.com/user-attachments/assets/e22deac4-a053-45fb-8f21-dbcb64fc3d27" />
   
    - **Insight**: Across the top 5 CO2-emitting foods, farming is the largest contributor (e.g., 39.4 kg CO2/kg for beef), except for dark chocolate where land-use change dominates; showing that tackling farm emissions in livestock and deforestation in cocoa are key levers for reduction.
@@ -221,3 +221,4 @@ For inquiries or collaboration, please reach out to: [manoelvuu@gmail.com](mailt
 - **Git/GitHub:** Version control and repository hosting for `.pbix` files, visuals, and supporting documentation.
 
 **Date:** April 11, 2025
+**Updated:** September 30, 2025
