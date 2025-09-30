@@ -113,115 +113,90 @@ To answer the 7 business questions, I used Power BI’s Query Editor and DAX, le
 # Visualization & Key Insights
 The analysis is visualized in `Environmental Impact of Food Production Analysis.pbix` across 7 pages, each addressing a specific question or summary. Visuals are designed for clarity, including bar, pie, and scatter charts, with KPI cards for quick insights.
 
-1. **Overview & Key Metrics** ![Overview   Key Metrics](https://github.com/user-attachments/assets/3e2da351-b32a-4cce-a997-1c6e2f97b8f7)
- 
-   - **Visuals**:  
-     - KPI cards: Avg. CO₂ (3.47 kg/kg), Water (1,242 L/kg), Land (5.58 m²/kg), Eutrophication (29 g PO₄eq/kg).  
-     - Multi-row Card: Top 5 CO₂ Emitters (Beef, Lamb, Cheese, etc.).  
-     - Pie Chart: Plant (7%) vs. Animal (93%) land use.  
-   - **Purpose**: Quick snapshot of dataset averages and key culprits.
+1. **Overview & Key Metrics** <img width="1296" height="714" alt="Overview   Key Metrics" src="https://github.com/user-attachments/assets/718cf241-485e-4351-ad7f-bf4ed76a94f9" />
 
-2. **Q1: Which food has the highest total CO2 footprint per kg?** <img width="1296" height="714" alt="Overview   Key Metrics" src="https://github.com/user-attachments/assets/06dfec73-c24b-4e8f-8603-a9a3f963cae5" />
+   - **Insight**: On average, foods emit 5.97 kg CO₂, use 824 L of water, 25.9 m² of land, and cause 40.8 g eutrophication per kg underscoring their heavy environmental toll. Animal-based foods dominate with 72.5% of total CO₂, more than double plants. Strikingly, just five foods; beef, lamb, cheese, dairy beef, and dark chocolate drive nearly the entire emissions footprint, showing that tackling a handful of items can unlock major sustainability gains.
+  
+2. **Q1: Which food has the highest total CO2 footprint per kg?** <img width="600" height="645" alt="CO2 emission" src="https://github.com/user-attachments/assets/52c9346b-bf47-4755-95b1-e8c0d03cdccc" />
 
    - **Insight**: Animal-based foods produce over 2.5× more CO₂ per kg than plant-based, making them the biggest driver of emissions; reducing animal intake offers the largest sustainability gains.
    - 
-3. **Q2: How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?** ![CO2 Emission by Production Stage for Top 5 Foods](https://github.com/user-attachments/assets/f7ce4d64-6869-47db-8a7c-5b442e254885)
+3. **Q2: How do CO2 emissions vary across production stages for the top 5 CO2-emitting foods?** <img width="698" height="641" alt="Top 5 foods production stage emission" src="https://github.com/user-attachments/assets/e22deac4-a053-45fb-8f21-dbcb64fc3d27" />
+  
+   - **Insight**: Across the top 5 CO2-emitting foods, farming is the largest contributor (e.g., 39.4 kg CO2/kg for beef), except for dark chocolate where land-use change dominates; showing that tackling farm emissions in livestock and deforestation in cocoa are key levers for reduction.
 
-   - **Visual**: Stacked bar chart (x: Top 5 Foods, y: CO2 by stage).  
-   - **Insight**: Farm stage ~27% for Beef, highest contributor.
+4. **Q3: Which foods consume the most freshwater withdrawals per kg?** <img width="796" height="642" alt="Water use" src="https://github.com/user-attachments/assets/e1082f71-b0b3-4734-b3e9-da3ef074bcd4" />
+  
+   - **Insight**:Animal-based foods consume the most water (18.9k L/kg), nearly double plants (11.9k L/kg) and 4× non-protein (4.6k L/kg); showing that reducing animal products or improving irrigation in livestock farming offers the biggest water savings.
 
-4. **Q3: Which foods consume the most freshwater withdrawals per kg?** ![Freshwater Withdrawal per kg by Food](https://github.com/user-attachments/assets/e10e060f-0cb2-4e57-845a-a5c4a373943c)
-
-   - **Visual**: Bar chart (x: Food, y: Freshwater withdrawals per kg).  
-   - **Insight**: Cheese = 5,605 L/kg, ~16% of total.
-
-5. **Q4: How do plant-based vs. animal-based foods compare in land use per kg?** ![Average kg per Land Use - Animal Vs Plant](https://github.com/user-attachments/assets/1f25b3f6-044b-478f-9c01-39b76d9a1f81)
-
-   - **Visual**: Pie chart (Animal: 93%, Plant: 7%).  
-   - **Insight**: Animal foods dominate land use.
-
-6. **Q5: Which production stage contributes most to average CO2 emissions across all 43 foods?** ![CO2 by Production Stage](https://github.com/user-attachments/assets/ca1e365b-d254-496b-98cf-7b4aefd53a29)
-
-   - **Visual**: Bar chart (x: Stage, y: Avg. CO2 per kg).  
-   - **Insight**: Farm stage = 3.47 kg CO₂/kg, ~50x Retail.
-
-7. **Q6: Which foods have the highest eutrophying emissions per kg?** ![Eutrophying Emissions](https://github.com/user-attachments/assets/0370f257-f143-48bd-b530-914d405586f4)
-
-   - **Visual**: Bar chart (x: Food, y: Eutrophying emissions per kg).  
-   - **Insight**: Beef (dairy herd) = 365 g PO₄eq/kg, ~21% of total.
-
-8. **Q7: Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?** ![CO2 Vs Water Correlation](https://github.com/user-attachments/assets/20a0a3ff-b1bc-441f-9cdf-e9779ea2b9fd)
-
-   - **Visual**: Scatter plot and Gauge Visual (x: Total CO2, y: Freshwater withdrawals).  
-   - **Insight**: Moderate correlation = 0.33.
-
-9. **Sustainability Summary & Recommendations** ![Sustainability Summary and Recommendation](https://github.com/user-attachments/assets/0b02a98b-7c4d-4f67-b149-ee15a0f56da1)
+5. **Q4: How do plant-based vs. animal-based foods compare in land use per kg?** <img width="502" height="643" alt="Land use" src="https://github.com/user-attachments/assets/7313dd1f-c207-42ce-b0d4-b7822e87439f" />
  
-   - **Visual**: Text (Challenge, Insights, So What, What Now, Conclusion).  
+   - **Insight**: Animal-based foods dominate land use (84.6%) compared to plants (15.4%), showing that shifting diets toward plant-based options can significantly free up land for forests, biodiversity, or alternative agriculture.
+
+6. **Q5: Which production stage contributes most to average CO2 emissions across all 43 foods?** <img width="1293" height="639" alt="Production stage emission" src="https://github.com/user-attachments/assets/52f298e3-ee9f-4c66-84ad-c0aa2767e39d" />
+  
+   - **Insight**: The farm stage is the biggest driver of CO2 emissions (3.47 kg CO2/kg), over 25× higher than retail (0.07 kg CO2/kg), showing that improving farming practices offers the clearest path to large-scale emission reductions across foods.
+     
+7. **Q6: Which foods have the highest eutrophying emissions per kg?** <img width="1312" height="639" alt="Eutrophication emission" src="https://github.com/user-attachments/assets/dc734246-3c75-4a00-80e2-bf8e9ec9dde8" />
+  
+   - **Insight**: Animal-based foods generate the highest eutrophying emissions (1,255 g/kg), over 3× higher than plants (347 g/kg), making them the main source of water pollution; shifting diets toward plant-based foods can significantly cut nutrient runoff.
+
+8. **Q7: Is there a correlation between freshwater withdrawals and total CO2 emissions per kg?** <img width="1299" height="646" alt="Correlation analysis" src="https://github.com/user-attachments/assets/d9944bf0-c304-4606-82ee-fb3d0c8cae57" />
+  
+   - **Insight**: CO2 emissions and freshwater use show a moderate correlation (r = 0.33), meaning high-emission foods also tend to overuse water; targeting these foods offers a double win for climate and water sustainability.
+
+9. **Sustainability Summary & Recommendations** <img width="1289" height="730" alt="Sustaintainability summary" src="https://github.com/user-attachments/assets/3154820e-cf8f-4cc8-843e-fe91c72c436a" />
+ 
    - **Content**: Full text provided below.
 
 ## Sustainability Summary & Recommendations
 The final page synthesizes findings into a concise, actionable narrative for policymakers, producers, and consumers.
 
 **The Challenge (Why it matters)**  
-Our food choices are reshaping the planet. Some foods, especially beef and cheese consume excessive land, water, and energy, accelerating climate change and environmental degradation. Others, like nuts and tofu, have a much smaller footprint. We analyzed 43 common foods to identify the biggest environmental contributors and spotlight smarter alternatives.
+Our food choices are reshaping the planet. Food production is one of the largest drivers of environmental change. Across 43 foods analyzed, the Animal-based category consistently dominates CO₂ emissions, land use, water consumption, and pollution with beef, cheese, and lamb standing out as major contributors. In contrast, plant-based foods like nuts and tofu leave a much smaller footprint. Understanding these category-level differences highlights where action can deliver the biggest sustainability gains.
 
 **Key Insights (What we found)**  
-- Beef leads emissions: Beef (beef herd) emits 59.60 kg CO₂ per kg, 300x more than nuts (0.20 kg CO₂/kg).
-- Animal products dominate impact: Beef, lamb, and cheese account for 93% of land use, 80% of CO₂ emissions, and 80% of pollution across all foods.
-- Cheese drains water: Cheese uses 5,605 liters of water per kg, about 16% of total water use in our analysis.
-- Farm stage is the biggest CO₂ source: Farming contributes, 27–50% of food-related CO₂, especially for animal products.
-- Impacts are linked: Food’s high in CO₂ emissions tend to also use more water (correlation: 0.33), amplifying their environmental cost.
+- Animal-based foods dominate impact; they produce over 2.5× more CO₂ than plant-based, use 85% of land, consume the most water, and generate the highest pollution.
+- Farming is the biggest hotspot; the farm stage drives the majority of CO₂ emissions across foods, making it the clearest target for reductions.
+- Category trade-offs matter; while dark chocolate’s emissions are land-use driven, most livestock impact stem from farming, highlighting different levers (deforestation vs. feed efficiency).
+- Environmental impacts are linked; foods high in CO₂ also tend to overuse water (moderate correlation, r = 0.33), offering “double-win” opportunities by targeting the same foods.
 
 **So What (Why this matters to you)**  
-- A small group of animal-based foods is responsible for a majority of environmental damage.
-- Addressing just a few high-impact foods or stages can yield significant sustainability gains across land, water, emissions, and pollution.
-- Data-backed decisions around food sourcing, production methods, and consumer engagement can help companies hit ESG goals faster with real-world impact.
+- A small group of animal-based foods drives the majority of environmental impact across CO₂, land, water, and pollution.
+- Targeting just these high-impact foods and farming practices can unlock outsized sustainability gains.
+- Using data-driven choices in sourcing, production, and consumer engagement helps organizations accelerate ESG progress while creating real-world environmental benefits.
   
 **What Now (Recommendations)**  
-**1. Prioritize Low-Impact Foods**
-- Promote plant-based options like nuts, legumes, and grains to reduce emissions and land use by up to 80% per kg.
-- Support internal and public education campaigns on high-impact foods.
+**1. Shift Toward Low-Impact Foods**
+- Promote plant-based options (nuts, legumes, grains) to cut emissions and land use by up to 80% per kg.
+- Run education campaigns to raise awareness of high-impact animal-based foods.
 
-**2. Transform Agricultural and Livestock Practices**
-- Focus on carbon dioxide (CO2) reduction strategies (e.g., improve feeding through dietary changes) to lower Farm stage emissions.
-- Improve irrigation for high-water-use foods like cheese and rice.
+**2. Transform Farming and Livestock Practices**
+- Focus on farm-stage CO₂ reduction (e.g., dietary changes for livestock, methane capture).
+- Improve irrigation efficiency for water-intensive foods like cheese and rice.
 
-**3. Support Food Innovation**
-- Invest in sustainable meat alternatives (plant-based, cultured meat).
-- Adopt precision agriculture to optimize inputs and cut waste.
+**3. Support Food System Innovation**
+- Invest in sustainable alternatives (plant-based proteins, cultured meat).
+- Adopt precision agriculture to optimize inputs and reduce waste.
 
 **4. Lead with Policy & Procurement**
-- Implement CO₂ labeling or eco scorecards for food products.
-- Review procurement policies to favor low-impact suppliers and menu items.
+- Introduce CO₂/eco labeling to inform consumers and drive demand shifts.
+- Update procurement policies to prioritize low-impact suppliers and menu items.
 
 **Conclusion**  
-A handful of foods cause the majority of environmental harm, and now we have the data to act. By targeting the most impactful items and improving key production stages, we can reduce emissions, conserve resources, and drive real progress toward a more sustainable food system.
-
-Smarter food choices aren’t just better for the planet, they’re better for business.
+A small set of foods and production stages cause most environmental harm. By targeting animal-based products and improving farm practices, businesses can cut emissions, conserve water and land, and reduce pollution. Smarter food choices aren’t just better for the planet, they also deliver competitive advantage, consumer trust, and ESG progress.
 
 # Evaluation
-The analysis answered seven core business questions and synthesized findings in a final **Sustainability Summary** page. Key insights and their implications include:
-
-- **Q1:** Beef produces **59.60 kg CO₂/kg**, nearly **300 times** more than nuts, making it the top target for emission cuts. Shifting to plant-based options like nuts can drastically reduce CO₂ emissions.
-- **Q2:** The **farm stage accounts for 27%** of beef’s CO₂ emissions, highlighting the importance of targeted carbon reduction strategies at this stage.
-- **Q3:** Cheese uses **5,605 L/kg of water**, contributing **16%** of total water use. This indicates that upgrading irrigation systems should be a priority.
-- **Q4:** Animal-based foods consume **93%** of total land use, compared to **7%** for plant-based foods. Promoting plant-based diets offers a high-impact solution.
-- **Q5:** The farm stage emits an average of **3.47 kg CO₂/kg**, nearly **50 times** more than the retail stage. This reinforces farming as the most effective intervention point.
-- **Q6:** Beef from dairy herds produces **365 g PO₄eq/kg**, accounting for **21%** of eutrophying pollution, linking high-CO₂ foods with water pollution concerns.
-- **Q7:** A **CO₂-water use correlation of 0.33** shows that high-impact foods (e.g., beef, cheese) negatively affect multiple environmental metrics simultaneously.
+The analysis answered seven core business questions and synthesized findings in a final **Sustainability Summary** page. Key insights and their implications are shared above.
 
 # Deployment
 The project is deployed as a shareable, well-documented repository designed for stakeholder use.
 
 ## Components:
 
-- **Power BI File:** `Environment Impact of Food Production Analysis.pbix` contains eight interactive pages (Overview, Q1–Q7, Sustainability Summary).
-- **Visuals:** Nine static PNGs in the `/visuals` folder for quick reference and presentation use:
-  - `Overview_Metrics.png`
-  - `Q1_CO2.png`, `Q2_Stages.png`, `Q3_Water.png`, `Q4_Land.png`, `Q5_Avg_CO2.png`, `Q6_Eutrophying.png`, `Q7_Correlation.png`
-  - `Sustainability_Summary.png`
-
+- **Power BI File:** `Environment Impact of Food Production Analysis.pbix` contains seven interactive pages (Overview, Q1–Q7, Sustainability Summary).
+- **Visuals:** Nine static PNGs in the `/visuals` folder for quick reference and presentation use.
+ 
 ## Usage Instructions:
 
 - **Interactive Exploration:** Open the `.pbix` file in Power BI Desktop to filter, drill down, and explore data insights.
