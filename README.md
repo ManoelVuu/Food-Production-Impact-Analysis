@@ -87,31 +87,31 @@ To answer the 7 business questions, I used Power BI’s Query Editor and DAX, le
 
 **Q1: Which food has the highest total CO₂ footprint per kg?**
 - **Method**: Sorted Total CO₂ descending, filtered to "per kg" metrics.
-- **Result**: Beef (beef herd) = 59.60 kg CO₂/kg, nearly 300× that of Nuts (0.20 kg CO₂/kg).
-
+- **Result**: Animal-based foods produce over 2.5× more CO₂ per kg than plant-based, making them the biggest driver of emissions; reducing animal intake offers the largest sustainability gains.
+  
 **Q2: How do CO₂ emissions vary across production stages for the top 5 CO₂-emitting foods?**
 - **Method**: Filtered top 5 foods (Beef, Lamb, Cheese, etc.), analyzed CO₂ stages (Land use change, Farm, etc.).
-- **Result**: Farm stage contributes 27% of Beef’s total emissions — the highest among all stages.
-
+- **Result**: Across the top 5 CO2-emitting foods, farming is the largest contributor (e.g., 39.4 kg CO2/kg for beef), except for dark chocolate where land-use change dominates; showing that tackling farm emissions in livestock and deforestation in cocoa are key levers for reduction.
+  
 **Q3: Which foods consume the most freshwater withdrawals per kg?**
 - **Method**: Sorted Freshwater Withdrawals per kg descending.
-- **Result**: Cheese = 5,605 L/kg, accounting for 16% of total freshwater usage.
+- **Result**: Animal-based foods consume the most water (18.9k L/kg), nearly double plants (11.9k L/kg) and 4× non-protein (4.6k L/kg); showing that reducing animal products or improving irrigation in livestock farming offers the biggest water savings.
 
 **Q4: How do plant-based vs. animal-based foods compare in land use per kg?**
 - **Method**: Grouped by Category, summed Land Use per kg.
-- **Result**: Animal foods = 93% of total land use; Plants = 7%.
+- **Result**: Animal-based foods dominate land use (84.6%) compared to plants (15.4%), showing that shifting diets toward plant-based options can significantly free up land for forests, biodiversity, or alternative agriculture.
 
 **Q5: Which production stage contributes most to average CO₂ emissions across all foods?**
 - **Method**: Used DAX to calculate average Total CO₂ per stage across 43 foods.
-- **Result**: Farm stage = 3.47 kg CO₂/kg, approximately 50× higher than Retail’s 0.07 kg.
-
+- **Result**: The farm stage is the biggest driver of CO2 emissions (3.47 kg CO2/kg), over 25× higher than retail (0.07 kg CO2/kg), showing that improving farming practices offers the clearest path to large-scale emission reductions across foods.
+  
 **Q6: Which foods have the highest eutrophying emissions per kg?**
 - **Method**: Sorted Eutrophying emissions per kg descending.
-- **Result**: Beef (dairy herd) = 365 g PO₄eq/kg, representing 21% of total eutrophication impact.
-
+- **Result**: Animal-based foods generate the highest eutrophying emissions (1,255 g/kg), over 3× higher than plants (347 g/kg), making them the main source of water pollution; shifting diets toward plant-based foods can significantly cut nutrient runoff.
+  
 **Q7: Is there a correlation between freshwater withdrawals and total CO₂ emissions per kg?**
 - **Method**: Created scatter chart and gauge visuals between Total CO₂ and Freshwater Withdrawals per kg.
-- **Result**: Moderate positive correlation = 0.33.
+- **Result**: CO2 emissions and freshwater use show a moderate correlation (r = 0.33), meaning high-emission foods also tend to overuse water; targeting these foods offers a double win for climate and water sustainability.
 
 **Notes**:
 - Filtered out nulls in "per 1000kcal" and "per 100g protein" analyses by using the Category field (excluded Non-Protein foods for protein-related metrics).
